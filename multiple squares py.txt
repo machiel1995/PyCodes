@@ -1,0 +1,17 @@
+import turtle
+mult_square=turtle.Turtle()
+def Multiple_Squares(length, colour):
+    mult_square.pencolor(colour)
+    mult_square.pensize(2)
+    mult_square.forward(length)
+    mult_square.right(90)
+    mult_square.forward(length)
+    mult_square.right(90)
+    mult_square.forward(length)
+    mult_square.right(90)
+    mult_square.forward(length)
+    mult_square.right(90)
+    mult_square.setheading(360)
+for i in range(60,120,15):
+    Multiple_Squares(i,"blue")
+    turtle.done

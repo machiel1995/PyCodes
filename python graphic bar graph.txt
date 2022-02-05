@@ -1,0 +1,41 @@
+from turtle import *
+
+import turtle
+
+
+def draw_bar(tur, heig, clr):
+    tur.fillcolor(clr)
+    tur.begin_fill()
+    tur.left(90)
+    tur.forward(heig)
+    tur.write(str(heig))
+    tur.right(90)
+    tur.forward(40)
+    tur.right(90)
+    tur.forward(heig)
+    tur.left(90)
+
+    tur.end_fill()
+
+
+axis = [50, 110, 130, 90, 145, 210, 100]
+colors = ["pink", "green", "blue", "brown",
+          "cyan", "yellow", "red"]
+
+maxheig = max(axis)
+numberbars = len(axis)
+bordr = 10
+
+ws = turtle.Screen()
+ws.setworldcoordinates(0 - bordr, 0 - bordr,
+                       40 * numberbars + bordr,
+                       maxheig + bordr)
+
+tur = turtle.Turtle()
+tur.pensize(3)
+
+for x in range(len(axis)):
+    draw_bar(tur, axis[x],
+             colors[x])
+
+ws.exitonclick()
